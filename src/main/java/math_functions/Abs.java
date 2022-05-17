@@ -9,6 +9,7 @@ public class Abs {
     public static void main(String[] args) {
         System.out.println(displayClosestToNum(8, 5, 11));
         System.out.println(displayClosestToNum(14, 22, 7));
+        System.out.println(displayClosestToNum(10, 122, 87));
     }
 
     /**
