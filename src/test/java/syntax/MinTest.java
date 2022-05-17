@@ -1,7 +1,7 @@
 package syntax;
 
 import org.junit.Test;
-import math_functions.Min;
+import math.Min;
 
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;

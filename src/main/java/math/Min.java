@@ -1,4 +1,4 @@
-package math_functions;
+package math;
 
 /**
  * A simple class represents a comparison of two numbers value

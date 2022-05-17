@@ -1,4 +1,4 @@
-package math_functions;
+package math;
 
 /**
  * The class represents an algorithm that returns the closer integer to a number value
