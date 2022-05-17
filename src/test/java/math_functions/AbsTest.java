@@ -19,4 +19,11 @@ public class AbsTest {
         int second = -5;
         Assert.assertEquals(Abs.displayClosestToNum(num,first,second),second);
     }
+    @Test
+    public void whenBothClosestToNum() {
+        int num = -10;
+        int first = 20;
+        int second = 20;
+        Assert.assertEquals(Abs.displayClosestToNum(num,first,second),first);
+    }
 }
