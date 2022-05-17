@@ -23,5 +23,4 @@ public class SumNumbers {
                 .reduce(Integer::sum)
                 .get();
     }
-
 }
