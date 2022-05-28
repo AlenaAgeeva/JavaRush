@@ -6,6 +6,7 @@ import java.util.Scanner;
 /**
  * A class collects 10 scanned from console strings into an array
  * and prints reversed values of each string on a console
+ *
  * @author Alena Ageeva
  */
 public class ReversedArray {
@@ -18,7 +19,7 @@ public class ReversedArray {
             }
         }
         Arrays.stream(line)
-                .map(s->new StringBuilder(s).reverse())
+                .map(s -> new StringBuilder(s).reverse())
                 .forEach(System.out::println);
     }
 }
