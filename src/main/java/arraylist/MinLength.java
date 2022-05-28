@@ -7,12 +7,12 @@ import java.util.Scanner;
 /**
  * Create an arraylist of Strings.
  * Scan and add 5 strings to the arraylist 'strings'.
- * Find the longest string of the arraylist.
+ * Find the shortest string of the arraylist.
  * Print the found string to the screen.
  *
  * @author Alena Ageeva
  */
-public class MaxLength {
+public class MinLength {
     /**
      * Static arraylist for sorting
      */
@@ -24,7 +24,7 @@ public class MaxLength {
                     .limit(5)
                     .forEach(v -> strings.add(v));
             System.out.println(strings.stream()
-                    .max(Comparator.comparingInt(String::length))
+                    .min(Comparator.comparingInt(String::length))
                     .get());
         }
     }
