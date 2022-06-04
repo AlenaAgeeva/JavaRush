@@ -6,6 +6,7 @@ import java.util.stream.Collectors;
 /**
  * The user enters a list of words (and numbers) from the keyboard.
  * Output words in ascending order, numbers in descending order.
+ *
  * @author Alena Ageeva
  */
 public class DigitsAndWords {
@@ -16,11 +17,11 @@ public class DigitsAndWords {
         lines.stream()
                 .filter(x -> x.matches("-?\\d+(.\\d+)?"))
                 .sorted(Comparator.reverseOrder())
-                .forEach(s -> System.out.print(s+" "));
+                .forEach(s -> System.out.print(s + " "));
         System.out.println();
         lines.stream()
                 .filter(x -> !x.matches("-?\\d+(.\\d+)?"))
                 .sorted(String::compareTo)
-                .forEach(s -> System.out.print(s+" "));
+                .forEach(s -> System.out.print(s + " "));
     }
 }
