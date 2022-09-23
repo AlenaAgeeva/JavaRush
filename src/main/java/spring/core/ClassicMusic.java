@@ -4,6 +4,13 @@ public class ClassicMusic implements Music {
     private String name;
     private int age;
 
+    private ClassicMusic() {
+    }
+
+    public static ClassicMusic getClassicalMusic() {
+        return new ClassicMusic();
+    }
+
     public String getName() {
         return name;
     }

@@ -7,12 +7,16 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
     <context:property-placeholder location="classpath:musicplayer.properties"/>
-    <bean id="musicBean1" class="spring.core.RapMusic"></bean>
-    <bean id="musicBean2" class="spring.core.ClassicMusic"></bean>
-    <bean id="musicBean3" class="spring.core.RockMusic"></bean>
+    <bean id="musicBean1" class="spring.core.RapMusic"
+          factory-method="getRapMusic"></bean>
+    <bean id="musicBean2" class="spring.core.ClassicMusic"
+          factory-method="getClassicalMusic"></bean>
+    <bean id="musicBean3" class="spring.core.RockMusic"
+          factory-method="getRockMusic"></bean>
     <bean id="musicBean4" class="spring.core.JazzMusic"
           init-method="initMethod"
-          destroy-method="destroyMethod"></bean>
+          destroy-method="destroyMethod"
+          factory-method="getJazzMusic"></bean>
     <bean id="musicPlayer" class="spring.core.MusicPlayer"
           scope="singleton"
           init-method="initMethod"

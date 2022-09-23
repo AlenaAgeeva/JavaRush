@@ -4,6 +4,13 @@ public class RockMusic implements Music {
     private String name;
     private int age;
 
+    private RockMusic() {
+    }
+
+    public static RockMusic getRockMusic() {
+        return new RockMusic();
+    }
+
     public String getName() {
         return name;
     }
@@ -19,6 +26,7 @@ public class RockMusic implements Music {
     public void setAge(int age) {
         this.age = age;
     }
+
     @Override
     public String song() {
         return "Rock music";

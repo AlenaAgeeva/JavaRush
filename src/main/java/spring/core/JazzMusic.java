@@ -4,6 +4,13 @@ public class JazzMusic implements Music {
     private String name;
     private int age;
 
+    private JazzMusic() {
+    }
+
+    public static JazzMusic getJazzMusic() {
+        return new JazzMusic();
+    }
+
     public String getName() {
         return name;
     }
