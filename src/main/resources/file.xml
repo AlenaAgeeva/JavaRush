@@ -6,30 +6,5 @@
         http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
-    <context:property-placeholder location="classpath:musicplayer.properties"/>
-    <bean id="musicBean1" class="spring.core.RapMusic"
-          factory-method="getRapMusic"></bean>
-    <bean id="musicBean2" class="spring.core.ClassicMusic"
-          factory-method="getClassicalMusic"></bean>
-    <bean id="musicBean3" class="spring.core.RockMusic"
-          factory-method="getRockMusic"></bean>
-    <bean id="musicBean4" class="spring.core.JazzMusic"
-          init-method="initMethod"
-          destroy-method="destroyMethod"
-          factory-method="getJazzMusic"></bean>
-    <bean id="musicPlayer" class="spring.core.MusicPlayer"
-          scope="singleton"
-          init-method="initMethod"
-          destroy-method="destroyMethod">
-        <property name="music">
-            <list>
-                <ref bean="musicBean1"/>
-                <ref bean="musicBean2"/>
-                <ref bean="musicBean3"/>
-                <ref bean="musicBean4"/>
-            </list>
-        </property>
-        <property name="name" value="${musicPlayer.name}"/>
-        <property name="volume" value="${musicPlayer.volume}"/>
-    </bean>
+    <context:component-scan base-package="spring.core"/>
 </beans>

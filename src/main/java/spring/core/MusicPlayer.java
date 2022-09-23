@@ -1,20 +1,21 @@
 package spring.core;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class MusicPlayer {
-    private List<Music> music = new ArrayList<>();
     private String name;
     private int volume;
+    private Music music;
 
-    public MusicPlayer(List<Music> music) {
+    public MusicPlayer(Music music) {
         this.music = music;
     }
 
     public MusicPlayer() {
     }
 
-    public void setMusic(List<Music> music) {
+    public void setMusic(Music music) {
         this.music = music;
     }
 
@@ -35,13 +36,6 @@ public class MusicPlayer {
     }
 
     public void getSong() {
-        music.forEach(s -> System.out.println(s.song()));
-    }
-
-    public void initMethod() {
-        System.out.println("Initialization method");
-    }
-    public void destroyMethod() {
-        System.out.println("Destruction method");
+        System.out.println(music.song());
     }
 }

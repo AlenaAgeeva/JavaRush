@@ -1,5 +1,8 @@
 package spring.core;
 
+import org.springframework.stereotype.Component;
+
+@Component("rapMusic")
 public class RapMusic implements Music {
     private String name;
     private int age;
