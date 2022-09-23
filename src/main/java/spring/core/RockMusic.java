@@ -21,6 +21,6 @@ public class RockMusic implements Music {
     }
     @Override
     public String song() {
-        return "Rock";
+        return "Rock music";
     }
 }

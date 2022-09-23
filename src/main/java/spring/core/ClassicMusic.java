@@ -22,6 +22,6 @@ public class ClassicMusic implements Music {
 
     @Override
     public String song() {
-        return "Classic";
+        return "Classic music";
     }
 }

@@ -21,6 +21,6 @@ public class RapMusic implements Music {
     }
     @Override
     public String song() {
-        return "Rap";
+        return "Rap music";
     }
 }
