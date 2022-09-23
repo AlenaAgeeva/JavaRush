@@ -37,4 +37,11 @@ public class MusicPlayer {
     public void getSong() {
         music.forEach(s -> System.out.println(s.song()));
     }
+
+    public void initMethod() {
+        System.out.println("Initialization method");
+    }
+    public void destroyMethod() {
+        System.out.println("Destruction method");
+    }
 }

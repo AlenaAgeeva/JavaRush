@@ -10,8 +10,13 @@
     <bean id="musicBean1" class="spring.core.RapMusic"></bean>
     <bean id="musicBean2" class="spring.core.ClassicMusic"></bean>
     <bean id="musicBean3" class="spring.core.RockMusic"></bean>
-    <bean id="musicBean4" class="spring.core.JazzMusic"></bean>
-    <bean id="musicPlayer" class="spring.core.MusicPlayer">
+    <bean id="musicBean4" class="spring.core.JazzMusic"
+          init-method="initMethod"
+          destroy-method="destroyMethod"></bean>
+    <bean id="musicPlayer" class="spring.core.MusicPlayer"
+          scope="singleton"
+          init-method="initMethod"
+          destroy-method="destroyMethod">
         <property name="music">
             <list>
                 <ref bean="musicBean1"/>

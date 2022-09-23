@@ -19,8 +19,17 @@ public class JazzMusic implements Music {
     public void setAge(int age) {
         this.age = age;
     }
+
     @Override
     public String song() {
         return "Jazz music";
+    }
+
+    public void initMethod() {
+        System.out.println("Jazz init method");
+    }
+
+    public void destroyMethod() {
+        System.out.println("Jazz destroy method");
     }
 }
