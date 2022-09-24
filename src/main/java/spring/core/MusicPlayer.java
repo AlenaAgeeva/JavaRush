@@ -1,41 +1,20 @@
 package spring.core;
 
-import java.util.ArrayList;
-import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
+@Component
 public class MusicPlayer {
-    private String name;
-    private int volume;
-    private Music music;
+    private ClassicMusic classicMusic;
+    private RockMusic rockMusic;
 
-    public MusicPlayer(Music music) {
-        this.music = music;
+    @Autowired
+    public MusicPlayer(ClassicMusic classicMusic, RockMusic rockMusic) {
+        this.classicMusic = classicMusic;
+        this.rockMusic = rockMusic;
     }
 
-    public MusicPlayer() {
-    }
-
-    public void setMusic(Music music) {
-        this.music = music;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public int getVolume() {
-        return volume;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setVolume(int volume) {
-        this.volume = volume;
-    }
-
-    public void getSong() {
-        System.out.println(music.song());
+    public String getSong() {
+        return classicMusic.song() + " " + rockMusic.song();
     }
 }
