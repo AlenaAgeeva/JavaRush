@@ -1,10 +1,10 @@
 package spring.core;
 
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class TestMusic {
     public static void main(String[] args) {
-        ClassPathXmlApplicationContext c = new ClassPathXmlApplicationContext("file.xml");
+        AnnotationConfigApplicationContext c = new AnnotationConfigApplicationContext(SpringConfig.class);
         MusicPlayer musicPlayer = c.getBean("musicPlayer", MusicPlayer.class);
         System.out.println(musicPlayer);
         ClassicMusic cl1 = c.getBean("classicMusic", ClassicMusic.class);

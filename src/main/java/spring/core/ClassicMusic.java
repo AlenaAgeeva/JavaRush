@@ -1,10 +1,5 @@
 package spring.core;
 
-import org.springframework.context.annotation.Scope;
-import org.springframework.stereotype.Component;
-
-@Component("classicMusic")
-@Scope("prototype")
 public class ClassicMusic implements Music {
     private String name;
     private int age;
